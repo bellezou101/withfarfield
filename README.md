@@ -1,20 +1,24 @@
 # Farfield website
 
-Static site for withfarfield.com. No build step.
+Three pages: `index.html` (home), `product.html`, and `team.html` (Careers).
+Everything the pages need is inside the files, apart from the favicon and share image in `assets`.
 
-## Before you publish
-1. **Form.** Open `index.html`, find `FORM_ENDPOINT` near the bottom, and paste a form endpoint
-   (for example a free Formspree form: https://formspree.io/f/xxxxxxxx). Until you do, the form
-   opens an email to `hello@withfarfield.com`, so set up that mailbox or change `FALLBACK_EMAIL`.
-2. **Confirm the copy** you are comfortable making public: the founding-cohort perks, the founder stories
-   (anonymized, nothing firm-specific), and the IDC figure with its source.
+## Update the live site
+1. In your GitHub repo, click Add file > Upload files.
+2. Drag in `index.html`, `product.html`, `team.html`, and the `assets` folder. Leave `CNAME` alone.
+3. Commit. Wait a minute, then hard refresh withfarfield.com (Cmd+Shift+R).
+4. Optional clean-up: in the repo's `assets` folder, the old photos, fonts, and screenshots are no longer used and can be deleted.
 
-## Publish on GitHub Pages
-1. Put these files at the root of a repo (for example `farfield-website`) and push.
-2. Settings > Pages > deploy from the `main` branch, root folder.
-3. Settings > Pages > Custom domain: `withfarfield.com` (the `CNAME` file is already included).
-4. At your registrar add four A records for `@`: 185.199.108.153, 185.199.109.153,
-   185.199.110.153, 185.199.111.153, and a CNAME for `www` pointing to `<your-username>.github.io`.
-5. When GitHub's DNS check passes, tick Enforce HTTPS.
+## Look and feel
+- Backgrounds: ink (#06080C), electric blue (#2A50E6), and chalk (#EDEFF4). Change them in the `:root` block at the top of the CSS.
+- Fonts: titles in Newsreader, body in Inter, small labels in IBM Plex Mono, all loaded from Google Fonts.
+- The field of marks in the hero and the closing band is drawn in the page script. It bends around the pointer, ripples on click,
+  pauses off screen, and is switched off for visitors who ask their device to reduce motion.
 
-Screenshots in `assets/` are from the working prototype and show sample data.
+## Booking
+Every "Book a demo" button opens your Google Calendar booking page in a new tab.
+To change it, search for `calendar.app.google` in the three HTML files.
+
+## The Careers form
+Submissions go nowhere until you connect a form. In `team.html`, find `JOIN_ENDPOINT` near the bottom and paste your form URL
+(see farfield-form-script.gs for the free Google Sheets setup). Until then, the form opens an email to hello@withfarfield.com.
