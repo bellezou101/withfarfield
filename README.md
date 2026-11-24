@@ -1,24 +1,31 @@
 # Farfield website
 
-Three pages: `index.html` (home), `product.html`, and `team.html` (Careers).
-Everything the pages need is inside the files, apart from the favicon and share image in `assets`.
+Three pages: `index.html` (Home), `product.html` (Product) and `team.html` (Careers). Keep these filenames so existing links keep working.
 
-## Update the live site
-1. In your GitHub repo, click Add file > Upload files.
-2. Drag in `index.html`, `product.html`, `team.html`, and the `assets` folder. Leave `CNAME` alone.
-3. Commit. Wait a minute, then hard refresh withfarfield.com (Cmd+Shift+R).
-4. Optional clean-up: in the repo's `assets` folder, the old photos, fonts, and screenshots are no longer used and can be deleted.
+Shared files live in `assets/`:
+- `site.css`: the whole design system (colors at the top in `:root`).
+- `site.js`: mobile menu, the fix-ticket tabs and the release-check demo.
+- `fonts/`: Hanken Grotesk 400/500/600, self-hosted (no Google Fonts request). License in `fonts/hanken-grotesk-OFL.txt`.
+- `logo-mark.svg`: the ring logo, dark-ink version for the beige background. `logo-ring-dark-ink.png` is the PNG it was redrawn from.
+- `og.png` (share image, 1200×630), `favicon-64.png`, `apple-touch-icon.png`.
+
+## How changes reach withfarfield.com
+The site is served by GitHub Pages from this repo. `CNAME` points Pages at withfarfield.com; the domain's DNS is managed at Northwest Registered Agent.
+There is no build step or deploy workflow: whatever is on `main` goes live about a minute after it changes.
+So work on a branch, review a preview, and only merge to `main` when it is approved. Leave `CNAME` alone.
 
 ## Look and feel
-- Backgrounds: ink (#06080C), electric blue (#2A50E6), and chalk (#EDEFF4). Change them in the `:root` block at the top of the CSS.
-- Fonts: titles in Newsreader, body in Inter, small labels in IBM Plex Mono, all loaded from Google Fonts.
-- The field of marks in the hero and the closing band is drawn in the page script. It bends around the pointer, ripples on click,
-  pauses off screen, and is switched off for visitors who ask their device to reduce motion.
+- Beige page `#F4F3EF`, ink `#0B0E14`, secondary text `#4B5362`, one blue accent `#2A4BD0` for labels, numerals, links and thin lines.
+- Cards `#FBFAF7` with a 4px black top border; faint lavender `#EFEDF8` for step and highlight boxes.
+- Every section opens with a 2px black rule and a small numbered label.
 
-## Booking
-Every "Book a demo" button opens your Google Calendar booking page in a new tab.
-To change it, search for `calendar.app.google` in the three HTML files.
+## Booking and contact
+Every "Book a demo" button opens the Google Calendar booking page in a new tab. Search for `calendar.app.google` to change it.
+The Contact section uses `mailto:contact@withfarfield.com`.
+
+## Pilot link
+"Learn more about a pilot" currently points to the Contact section. Search for `TODO(pilot-url)` in `index.html` and `product.html` and replace the `href` once the pilot page exists.
 
 ## The Careers form
-Submissions go nowhere until you connect a form. In `team.html`, find `JOIN_ENDPOINT` near the bottom and paste your form URL
-(see farfield-form-script.gs for the free Google Sheets setup). Until then, the form opens an email to hello@withfarfield.com.
+In `team.html`, `JOIN_ENDPOINT` is empty, so a submission opens an email to contact@withfarfield.com with the answers filled in, and the page shows a confirmation.
+To collect entries in a sheet instead, paste a form URL (for example a Google Apps Script web app) into `JOIN_ENDPOINT`.

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Farfield">
+  <title>Farfield</title>
+  <!-- Ring logo, dark-ink version for light backgrounds. Redrawn from the PNG: ink #0B0E14, blue #4D7CFF unchanged. -->
+  <circle cx="256" cy="256" r="236" fill="none" stroke="#4D7CFF" stroke-width="34" pathLength="360" stroke-dasharray="18 12" transform="rotate(-9 256 256)"/>
+  <circle cx="256" cy="256" r="168" fill="none" stroke="#4D7CFF" stroke-width="34" pathLength="360" stroke-dasharray="58 14" transform="rotate(-83 256 256)"/>
+  <circle cx="256" cy="256" r="96" fill="none" stroke="#0B0E14" stroke-width="40"/>
+  <circle cx="256" cy="256" r="38" fill="#0B0E14"/>
+</svg>
