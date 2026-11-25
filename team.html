@@ -26,9 +26,9 @@
     <p class="lead">We don’t have any open positions at the moment, but we’re always looking to meet exceptional people for the future. If you’re interested in working with us, please share your information and we’ll respond within 24 hours.</p></div>
   <div class="jcard reveal"><form id="jform" novalidate>
     <div class="hp"><label for="jweb">Leave this empty</label><input id="jweb" name="website" tabindex="-1" autocomplete="off"></div>
-    <div class="two"><div><label for="jname">Name</label><input id="jname" name="name" autocomplete="name" required></div><div><label for="jemail">Email</label><input id="jemail" name="email" type="email" autocomplete="email" required></div></div>
-    <div><label for="jlinkedin">LinkedIn</label><input id="jlinkedin" name="linkedin" inputmode="url" autocomplete="url" placeholder="linkedin.com/in/yourname" required></div>
-    <div><label for="jstory">Tell us about a time AI got something wrong at your job, and what you did about it.</label><textarea id="jstory" name="story" required></textarea></div>
+    <div class="two"><div><label for="jname">Name</label><input id="jname" name="name" autocomplete="name" maxlength="200" required></div><div><label for="jemail">Email</label><input id="jemail" name="email" type="email" autocomplete="email" maxlength="254" required></div></div>
+    <div><label for="jlinkedin">LinkedIn</label><input id="jlinkedin" name="linkedin" inputmode="url" autocomplete="url" placeholder="linkedin.com/in/yourname" maxlength="300" required></div>
+    <div><label for="jstory">Tell us about a time AI got something wrong at your job, and what you did about it.</label><textarea id="jstory" name="story" maxlength="5000" required></textarea></div>
     <button class="btn" type="submit">Submit your information <span class="arr" aria-hidden="true">&rarr;</span></button>
     <p class="status" id="jstatus" role="status" aria-live="polite"></p>
   </form>
@@ -50,7 +50,8 @@
   function send(url,d){
     if(url.indexOf('script.google.com')>-1){   // Google Apps Script: a plain form post (no CORS preflight)
       var body=new URLSearchParams(); Object.keys(d).forEach(function(k){ body.append(k,d[k]); });
-      return fetch(url,{method:'POST',mode:'no-cors',body:body});
+      // A simple form post (no preflight). The script answers {ok:true} once the row is saved.
+      return fetch(url,{method:'POST',body:body}).then(function(r){ return r.json(); }).then(function(j){ if(!j||!j.ok) throw new Error('not saved'); });
     }
     return fetch(url,{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){ if(!r.ok) throw new Error('bad'); });
   }
