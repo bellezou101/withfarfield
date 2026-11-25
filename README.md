@@ -3,7 +3,7 @@
 Three pages: `index.html` (Home), `product.html` (Product) and `team.html` (Careers). Keep these filenames so existing links keep working.
 
 Shared files live in `assets/`:
-- `site.css`: the original site's stylesheet, followed by a "light layer" at the bottom that recolors it to the beige palette. Change colors in the `:root` block of that layer.
+- `site.css`: the original site's stylesheet, followed by a "light layer" that recolors it to the beige palette and a "round 3" block that sets the font and spacing. Change colors in the `:root` block of the light layer.
 - `site.js`: mobile menu, reveal on scroll, the ripple field (hero, contact band, Product and Careers headers), the pinned "How it works" steps, the fix-ticket tabs and the release-check demo. Motion switches off for visitors who ask for reduced motion.
 - `lockup_light.png`: the original FARFIELD logo, dark-ink version, used unchanged in the nav and footer.
 - `logos/`: Citadel, Goldman Sachs, NVIDIA and Penn, shown in transparent black by CSS.
@@ -15,7 +15,8 @@ There is no build step or deploy workflow: whatever is on `main` goes live about
 So work on a branch, review a preview, and only merge to `main` when it is approved. Leave `CNAME` alone.
 
 ## Look and feel
-- Same layout, type and motion as the original site: titles in Newsreader, body in Inter, small labels in IBM Plex Mono (Google Fonts).
+- Layout and motion from the original site: ripple field, reveal on scroll, pinned "How it works" steps, looping figure animations.
+- Type: Hanken Grotesk 400/500/600, self-hosted in `assets/fonts/` (no Google Fonts request). The FARFIELD logo is an image and is unchanged.
 - Beige page `#F4F3EF`, ink `#0B0E14`, one blue accent `#2A4BD0`, light figure cards with a black top rule, faint lavender `#EFEDF8` for highlight boxes. No dark sections.
 
 ## Booking and contact

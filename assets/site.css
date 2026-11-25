@@ -1139,3 +1139,75 @@ footer{background:var(--bg);color:var(--muted);border-top:1px solid var(--line)}
 @media (max-width:960px){.now-diff{grid-column:1/-1}}
 .cmp-row{padding:20px 18px}
 .cmp-row.us{padding:19px 16px}
+
+/* =====================================================================
+   ROUND 3: Hanken Grotesk throughout, calmer hero, easier scroll
+   ===================================================================== */
+@font-face{font-family:"Hanken Grotesk";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/hanken-grotesk-400.woff2) format("woff2")}
+@font-face{font-family:"Hanken Grotesk";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/hanken-grotesk-500.woff2) format("woff2")}
+@font-face{font-family:"Hanken Grotesk";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/hanken-grotesk-600.woff2) format("woff2")}
+:root{
+  --serif:"Hanken Grotesk",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --sans:"Hanken Grotesk",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:"Hanken Grotesk",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --h:clamp(30px,3vw,44px); --h3:clamp(20px,1.6vw,24px);
+}
+body{font-size:17px}
+/* headings: one weight, tight tracking */
+h1,h2,h3,h4,
+.hero h1,.head h2,.problem .head h2,.voices .head h2,.why-copy h2,.team-l h2,.team-grid h2,.cta h2,.p-hero h1,.pp-text h2,.join h1,
+.step h3,.role h3,.hc h3,.voices .hc h3,.whyus h3,.route h4,.cmp-row h3,.sub-h,.q-head b,.hp-top b,.sig .nm,.jdone h2{font-weight:600;letter-spacing:-.025em}
+.step h3,.role h3,.hc h3,.voices .hc h3,.whyus h3,.cmp-row h3,.sig .nm{letter-spacing:-.018em}
+.hero h1 em,.p-hero h1 em{font-style:normal}
+/* big figures: medium weight instead of light serif */
+.frow2 s,.frow2 b,.xten .big,.ba .n,.stats3 b,.stat b,.fig-n b{font-weight:500;letter-spacing:-.03em}
+/* small labels: Hanken caps */
+.label,.lbl,.plate-head,.tags span,.seg button,.act,.rc-btn,.route .meta,.step .num,.hc .n,.pc-cap .n,.role .k,.now-grid .k,.whynote .k,.sig a,.founder .org,.founder .li,.fig-src,.cta .small,.tr.h,.g-cap,.rp b,.tag,.chart-head span,.jcard label,.foot{font-family:var(--sans);font-weight:600}
+.label{font-size:13px;letter-spacing:.12em}
+.lbl,.plate-head,.tr.h,.g-cap,.chart-head span{font-size:12px;letter-spacing:.1em}
+.instr,.q-body p,.rc-empty,.rc-run,.rc-res ul,.margin-note,.fbar,.doc-title,.hp-top em,.q-row .mm b,.theme em{font-family:var(--sans)}
+.foot{font-weight:500;letter-spacing:0;font-size:14px}
+.story p{font-size:17px;line-height:1.65}
+
+/* hero: headline, paragraph and buttons sit together; logos below. No empty band. */
+#top .hero-in{min-height:0;justify-content:flex-start;padding-top:clamp(120px,12vw,176px)}
+#top .hero h1,#top h1{margin-bottom:0;font-size:clamp(34px,4.4vw,60px);line-height:1.08;max-width:15em}
+#top .hero-in .lead{margin-top:clamp(22px,2.2vw,30px);font-size:clamp(18px,1.5vw,21px);max-width:36em}
+#top .hero-bar{margin-top:clamp(72px,8vw,120px)}
+@media (max-width:760px){
+  #top .hero-in{padding-top:104px}
+  #top .hero-in .lead{margin-top:20px}
+  #top .hero-bar{margin-top:56px}
+}
+.p-hero h1{font-size:clamp(34px,4.4vw,60px);line-height:1.08}
+
+/* one consistent content edge: sections align with the nav logo */
+.wrap{max-width:1280px}
+
+/* easier scroll: the pinned steps take less travel, sections a little tighter */
+.steps{height:calc(250vh - 120px)}
+.sec{padding:clamp(72px,8vw,112px) 0}
+.problem,.voices,.roles{padding:clamp(64px,7vw,100px) 0}
+
+/* "We keep hearing three things" on beige */
+.voices .head h2{color:var(--ink);font-size:var(--h);line-height:1.12}
+.voices .head .lead{font-size:17px;color:var(--text);margin-top:12px}
+.voices .hc h3{color:var(--ink);font-size:clamp(22px,2vw,28px);line-height:1.18}
+.voices .hc p{color:var(--text);font-size:16px}
+.hc::before{background:var(--blue)}
+
+/* why now: two lists side by side */
+.now-a{grid-column:1/span 6}
+.now-b{grid-column:7/span 6}
+@media (max-width:960px){.now-a,.now-b{grid-column:1/-1}}
+
+/* why Farfield note with the small rings */
+.whynote{display:grid;grid-template-columns:88px 1fr;gap:22px;align-items:center}
+.rings-mini svg{width:88px;height:88px;display:block}
+@media (max-width:420px){.whynote{grid-template-columns:64px 1fr}.rings-mini svg{width:64px;height:64px}}
+.sig .rl{max-width:34ch}
+.whynote{grid-template-columns:104px 1fr}
+.rings-mini svg{width:104px;height:104px}
+.rings-mini .rg{animation-name:pulse-soft}
+@keyframes pulse-soft{0%,100%{opacity:.6}40%{opacity:1}}
+.p-hero .lead{max-width:38em}

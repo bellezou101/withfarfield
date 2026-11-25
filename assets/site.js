@@ -202,3 +202,22 @@
     sync();
   });
 })();
+
+/* ---- Why Farfield: a small version of the original ring diagram (solid near the center, broken farther out) ---- */
+(function(){
+  var el=document.getElementById('rings-mini'); if(!el) return;
+  function col(k){ var u=k/7; return 'rgb('+Math.round(77+(104-77)*u)+','+Math.round(124+(112-124)*u)+','+Math.round(255+(226-255)*u)+')'; }
+  var C=[290,290], rings=[{r:34,t:'solid'},{r:72,t:'ring',w:13},{r:110,t:'dash',w:9,d:'48 16'},{r:148,t:'dash',w:6,d:'20 14'},{r:184,t:'sq',n:34,s:4.6},{r:216,t:'plus',n:44,s:4.4},{r:246,t:'circ',n:56,s:3.1},{r:274,t:'dot',n:76,s:1.5}];
+  var s='<svg viewBox="0 0 580 580" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">';
+  rings.forEach(function(g,k){ var c=k<2?'#0B0E14':col(k), o='<g class="rg" style="--i:'+k+'">';
+    if(g.t==='solid') o+='<circle cx="'+C[0]+'" cy="'+C[1]+'" r="'+g.r+'" fill="'+c+'"/>';
+    if(g.t==='ring') o+='<circle cx="'+C[0]+'" cy="'+C[1]+'" r="'+g.r+'" fill="none" stroke="'+c+'" stroke-width="'+g.w+'"/>';
+    if(g.t==='dash') o+='<circle cx="'+C[0]+'" cy="'+C[1]+'" r="'+g.r+'" fill="none" stroke="'+c+'" stroke-width="'+g.w+'" stroke-dasharray="'+g.d+'"/>';
+    if(g.n){ for(var i=0;i<g.n;i++){ var a=i/g.n*6.28318,x=(C[0]+Math.cos(a)*g.r).toFixed(1),y=(C[1]+Math.sin(a)*g.r).toFixed(1),z=g.s;
+      if(g.t==='sq') o+='<rect x="'+(x-z/2)+'" y="'+(y-z/2)+'" width="'+z+'" height="'+z+'" fill="'+c+'"/>';
+      if(g.t==='plus') o+='<path d="M'+(x-z)+' '+y+'H'+(+x+z)+'M'+x+' '+(y-z)+'V'+(+y+z)+'" stroke="'+c+'" stroke-width="2.4" fill="none"/>';
+      if(g.t==='circ') o+='<circle cx="'+x+'" cy="'+y+'" r="'+z+'" fill="none" stroke="'+c+'" stroke-width="2"/>';
+      if(g.t==='dot') o+='<circle cx="'+x+'" cy="'+y+'" r="'+(z*1.6)+'" fill="'+c+'"/>'; } }
+    s+=o+'</g>'; });
+  el.innerHTML=s+'</svg>';
+})();
