@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,6 @@
 <meta name="description" content="Farfield helps company AI continuously improve, based on the corrections employees already make.">
 <meta name="theme-color" content="#F4F3EF">
 <link rel="canonical" href="https://withfarfield.com/">
-<link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
 <link rel="icon" type="image/png" href="assets/favicon-64.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:title" content="Farfield | The best signal of what AI can’t do is how employees work around it">
@@ -17,189 +16,125 @@
 <meta property="og:image" content="https://withfarfield.com/assets/og.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" href="assets/fonts/hanken-grotesk-600.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/hanken-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.className="js";</script>
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="nav">
-  <div class="wrap nav-in">
-    <a class="brand" href="index.html" aria-label="Farfield home"><img src="assets/logo-mark.svg" alt="" width="30" height="30">Farfield</a>
-    <nav aria-label="Main"><ul>
-      <li><a href="#how">How it works</a></li>
-      <li><a href="product.html">Product</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="team.html">Careers</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul></nav>
-    <a class="btn sm book" href="https://calendar.app.google/Xvj6nB62QJjd9f3v9" target="_blank" rel="noopener">Book a demo</a>
-    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button>
-  </div>
-  <nav class="mnav" id="mnav" aria-label="Mobile" hidden>
-    <a href="#how">How it works</a><a href="product.html">Product</a><a href="#team">Team</a><a href="team.html">Careers</a><a href="#contact">Contact</a>
-    <a class="btn" href="https://calendar.app.google/Xvj6nB62QJjd9f3v9" target="_blank" rel="noopener">Book a demo</a>
-  </nav>
-</header>
-
+<header class="nav"><div class="wrap nav-in"><a class="logo" href="#top" aria-label="Farfield home"><img src="assets/lockup_light.png" alt="Farfield" width="132" height="22"></a><ul><li><a href="#how">How it works</a></li><li><a href="product.html">Product</a></li><li><a href="#team">Team</a></li><li><a href="team.html">Careers</a></li><li><a href="#contact">Contact</a></li></ul><a class="btn sm book" href="https://calendar.app.google/Xvj6nB62QJjd9f3v9" target="_blank" rel="noopener">Book a demo<span class="arr" aria-hidden="true">&rarr;</span></a><button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button></div><div class="mnav" id="mnav" hidden><a href="#how">How it works</a><a href="product.html">Product</a><a href="#team">Team</a><a href="team.html">Careers</a><a href="#contact">Contact</a><a class="btn" href="https://calendar.app.google/Xvj6nB62QJjd9f3v9" target="_blank" rel="noopener">Book a demo<span class="arr" aria-hidden="true">&rarr;</span></a></div></header>
 <main id="main">
 
-<section class="hero" id="top"><div class="wrap">
-  <h1>The best signal of what AI can’t do is how employees work around it.</h1>
-  <p class="lead">Farfield helps company AI continuously improve, based on the corrections employees already make.</p>
-  <div class="actions">
-    <a class="btn" href="https://calendar.app.google/Xvj6nB62QJjd9f3v9" target="_blank" rel="noopener">Book a demo</a>
-    <a class="btn secondary" href="#how">See how it works</a>
+<nav class="rail" aria-label="Sections"><a href="#problem"><i></i><span>Problem</span></a><a href="#how"><i></i><span>How it works</span></a><a href="#views"><i></i><span>Who it’s for</span></a><a href="#why"><i></i><span>Why now</span></a><a href="#team"><i></i><span>Team</span></a><a href="#contact"><i></i><span>Contact</span></a></nav>
+
+<section class="hero" id="top">
+  <canvas class="field-cv" id="heroField" aria-hidden="true"></canvas>
+  <div class="wrap hero-in">
+    <h1>The best signal of what AI can’t do is <em>how employees work around it.</em></h1>
+    <p class="lead">Farfield helps company AI continuously improve, based on the corrections employees already make.</p>
+    <div class="hero-actions"><a class="btn" href="https://calendar.app.google/Xvj6nB62QJjd9f3v9" target="_blank" rel="noopener">Book a demo<span class="arr" aria-hidden="true">&rarr;</span></a><a class="btn ghost" href="#how">See how it works</a></div>
+    <div class="hero-bar"><div class="by"><span>Built by the teams from</span><div class="logos"><img class="lg lg-citadel" alt="Citadel" src="assets/logos/citadel.png" draggable="false"><img class="lg lg-goldman" alt="Goldman Sachs" src="assets/logos/goldman-sachs.png" draggable="false"><img class="lg lg-nvidia" alt="NVIDIA" src="assets/logos/nvidia.png" draggable="false"><img class="lg lg-penn" alt="University of Pennsylvania" src="assets/logos/penn.png" draggable="false"></div></div></div>
   </div>
-  <div class="built">
-    <span class="label">Built by the teams from</span>
-    <ul><li>Citadel</li><li>Goldman Sachs</li><li>NVIDIA</li><li>University of Pennsylvania</li></ul>
+</section>
+
+<section class="sec problem" id="problem"><div class="wrap">
+  <div class="label reveal"><b>01</b> The problem</div>
+  <div class="head reveal"><h2>What employees fix after AI responds goes unseen.</h2><p class="lead">Imagine this: AI builds you a spreadsheet using a wrong growth assumption.</p></div>
+  <div class="pcards reveal">
+    <div class="pc"><div class="pc-viz"><div class="sk" aria-hidden="true"><span class="sk-row"><i style="--w:62%"></i><i style="--w:70%"></i><i style="--w:54%"></i></span><span class="sk-row hot"><span class="t">Growth assumption</span><b>12%</b><b>12%</b></span><span class="sk-row"><i style="--w:56%"></i><i style="--w:64%"></i><i style="--w:50%"></i></span></div><span class="tag">Wrong assumption</span></div><div class="pc-cap"><span class="n">01</span>The spreadsheet is built on a 12% growth rate. It’s wrong.</div></div>
+    <div class="pc"><div class="pc-viz"><div class="chat lt lite" aria-hidden="true"><div class="chat-body"><div class="msg u" style="--t:0.3s"><p>Fix the growth rate</p></div><div class="typing" style="--t:0.8s"><i class="av"></i><span><i></i><i></i><i></i></span></div><div class="msg a" style="--t:1.5s"><i class="av"></i><p>Growth set to 12%.</p></div><div class="msg u" style="--t:1.8s"><p>Still wrong. Recheck the source</p></div><div class="typing" style="--t:2.2s"><i class="av"></i><span><i></i><i></i><i></i></span></div><div class="msg a" style="--t:3.0s"><i class="av"></i><p>Rechecked. Growth is 12%.</p></div><div class="msg u" style="--t:3.2s"><p>Use the latest figure</p></div><div class="typing" style="--t:3.7s"><i class="av"></i><span><i></i><i></i><i></i></span></div><div class="msg a" style="--t:4.4s"><i class="av"></i><p>Latest figure applied: 12%.</p></div></div></div><span class="rp lone" aria-hidden="true"><b>Reprompt &times;1</b><b>Reprompt &times;2</b><b>Reprompt &times;3</b></span></div><div class="pc-cap"><span class="n">02</span>The employee reprompts three times.</div></div>
+    <div class="pc"><div class="pc-viz"><div class="sfs" aria-hidden="true"><div class="frow2"><s>12%</s><i>&rarr;</i><b>8%</b></div></div><span class="tag ok">Fixed in Excel</span></div><div class="pc-cap"><span class="n">03</span>Then manually fixes it in Excel, down to 8%.</div></div>
+    <div class="pc"><div class="pc-viz"><div class="xten" aria-hidden="true"><div class="dots"><i style="left:calc(50% + 113px);top:calc(50% + 20px);--dx:-113px;--dy:-20px;--k:0"></i><i style="left:calc(50% + 71px);top:calc(50% + 53px);--dx:-71px;--dy:-53px;--k:1"></i><i style="left:calc(50% + 2px);top:calc(50% + 66px);--dx:-2px;--dy:-66px;--k:2"></i><i style="left:calc(50% + -68px);top:calc(50% + 54px);--dx:68px;--dy:-54px;--k:3"></i><i style="left:calc(50% + -112px);top:calc(50% + 21px);--dx:112px;--dy:-21px;--k:4"></i><i style="left:calc(50% + -113px);top:calc(50% + -20px);--dx:113px;--dy:20px;--k:5"></i><i style="left:calc(50% + -71px);top:calc(50% + -53px);--dx:71px;--dy:53px;--k:6"></i><i style="left:calc(50% + -2px);top:calc(50% + -66px);--dx:2px;--dy:66px;--k:7"></i><i style="left:calc(50% + 68px);top:calc(50% + -54px);--dx:-68px;--dy:54px;--k:8"></i><i style="left:calc(50% + 112px);top:calc(50% + -21px);--dx:-112px;--dy:21px;--k:9"></i></div><div class="big">&times;10</div><small>Same correction, ten employees</small></div></div><div class="pc-cap"><span class="n">04</span>Ten others make the same correction. No one sees the pattern, and it never reaches the teams fixing the tools.</div></div>
+  </div>
+  <h3 class="sub-h reveal">Why this doesn’t exist today</h3>
+  <div class="hear-grid reveal">
+    <div class="hc"><span class="n">01</span><h3>Employees</h3><p>Don’t want to surface their individual rework, so it stays hidden.</p></div>
+    <div class="hc"><span class="n">02</span><h3>AI vendors</h3><p>ChatGPT and Claude grow with usage, so they have little reason to show the cleanup.</p></div>
+    <div class="hc"><span class="n">03</span><h3>Leaders</h3><p>Track usage, the wrong metric, because no one knows how to measure rework.</p></div>
   </div>
 </div></section>
 
-<section class="sec" id="problem" aria-labelledby="problem-h"><div class="wrap">
-  <div class="sec-head">
-    <span class="label">01 · The problem</span>
-    <h2 id="problem-h">What employees fix after AI responds goes unseen.</h2>
-  </div>
-  <div class="g2" style="margin-top:40px">
-    <div class="col">
-      <h3 class="label">Imagine this</h3>
-      <p class="intro-line">AI builds you a spreadsheet using a wrong growth assumption.</p>
-      <ol class="steps-ol">
-        <li>The spreadsheet is built on a 12% growth rate. It’s wrong.</li>
-        <li>The employee reprompts three times.</li>
-        <li>Then manually fixes it in Excel, down to 8%.</li>
-        <li class="end">Ten others make the same correction. No one sees the pattern, and it never reaches the teams fixing the tools.</li>
-      </ol>
-      <figure class="fig fixviz">
-        <figcaption class="fig-head"><span class="fg">Fig. 01</span><span>The correction</span><span class="sd">Sample data</span></figcaption>
-        <div class="fig-body">
-          <div class="fix12" role="img" aria-label="Growth assumption corrected in Excel from 12% to 8%">
-            <span class="where">Excel · Growth assumption</span>
-            <s>12%</s><span class="arrow" aria-hidden="true">→</span><b>8%</b>
-            <span class="tag">Corrected by hand</span>
-          </div>
-          <div class="tenx">
-            <div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            <span>Same correction, ten employees</span>
-          </div>
-        </div>
-      </figure>
+<section class="sec how" id="how"><div class="wrap">
+  <div class="label reveal"><b>02</b> How it works</div>
+  <div class="head solo reveal"><h2>Farfield turns corrections into a feedback loop.</h2></div>
+  <div class="steps" id="steps"><div class="steps-stick"><div class="steps-grid">
+    <div class="steps-list"><div class="track"><i class="fill"></i></div>
+      <div class="step"><span class="num">01</span><h3>Capture</h3><p>Captures every reprompt in AI chat tools like Claude and ChatGPT, then everything downstream in Mail, Word, Excel and PowerPoint. Employees don’t do anything extra. Data is masked by default.</p></div>
+      <div class="step"><span class="num">02</span><h3>Find patterns</h3><p>Groups the same correction across employees and teams, and measures the rework time each one causes.</p></div>
+      <div class="step"><span class="num">03</span><h3>Recommend</h3><p>Turns each recurring correction into a fix: an instruction change a team lead can approve, or an engineering ticket.</p></div>
+      <div class="step"><span class="num">04</span><h3>Verify</h3><p>Backtests each fix against past corrections before it ships, then tracks week over week whether rework falls.</p></div>
     </div>
-    <div class="col">
-      <h3 class="label">Why this doesn’t exist today</h3>
-      <ul class="blist">
-        <li><b>Employees</b><p>Don’t want to surface their individual rework, so it stays hidden.</p></li>
-        <li><b>AI vendors</b><p>ChatGPT and Claude grow with usage, so they have little reason to show the cleanup.</p></li>
-        <li><b>Leaders</b><p>Track usage, the wrong metric, because no one knows how to measure rework.</p></li>
-      </ul>
+    <div class="steps-vis">
+      <div class="vis"><figure class="plate"><figcaption class="plate-head"><span class="fg">Fig. 01</span><span class="ft">Capture</span><span class="sd">Sample data</span></figcaption><div class="plate-body"><div class="h-capture"><div class="lbl">Captured in</div><div class="tags"><span>AI chat tools</span><span>Mail</span><span>Word</span><span>Excel</span><span>PowerPoint</span></div><div class="lbl" style="margin-top:20px">Reprompts</div><div class="chat lt"><div class="chat-top"><span class="who"><i class="av"></i>Assistant</span><span class="rp"><b>Reprompt &times;1</b><b>Reprompt &times;2</b><b>Reprompt &times;3</b></span></div><div class="chat-body"><div class="msg u" style="--t:0.3s"><p>Fix the growth rate</p></div><div class="typing" style="--t:0.8s"><i class="av"></i><span><i></i><i></i><i></i></span></div><div class="msg a" style="--t:1.5s"><i class="av"></i><p>Growth set to 12%.</p></div><div class="msg u" style="--t:1.8s"><p>Still wrong. Recheck the source</p></div><div class="typing" style="--t:2.2s"><i class="av"></i><span><i></i><i></i><i></i></span></div><div class="msg a" style="--t:3.0s"><i class="av"></i><p>Rechecked. Growth is 12%.</p></div><div class="msg u" style="--t:3.2s"><p>Use the latest figure</p></div><div class="typing" style="--t:3.7s"><i class="av"></i><span><i></i><i></i><i></i></span></div><div class="msg a" style="--t:4.4s"><i class="av"></i><p>Latest figure applied: 12%.</p></div></div><div class="chat-in"><span>Message Assistant…</span><i class="send" aria-hidden="true"></i></div></div><div class="edit-chip"><span class="lbl" style="margin:0">Edit</span><em>Excel · Growth assumption</em><s>12%</s><i>&rarr;</i><b>8%</b></div></div></div></figure></div>
+      <div class="vis"><figure class="plate"><figcaption class="plate-head"><span class="fg">Fig. 02</span><span class="ft">Patterns</span><span class="sd">Sample data</span></figcaption><div class="plate-body"><div class="h-patterns"><div class="lbl">Grouped corrections</div><div class="hp"><div class="hp-top"><b>Required wording changed</b><em>41.8 min</em></div><span>20 times · 5 people</span><div class="bar" style="--w:100%"></div></div><div class="hp"><div class="hp-top"><b>Calendar events left out</b><em>32.3 min</em></div><span>15 times · 5 people</span><div class="bar" style="--w:77%"></div></div></div></div></figure></div>
+      <div class="vis"><figure class="plate"><figcaption class="plate-head"><span class="fg">Fig. 03</span><span class="ft">Fix ticket</span><span class="sd">Sample data</span></figcaption><div class="plate-body"><div class="fv"><div class="seg" role="tablist" aria-label="Fix route"><button type="button" role="tab" aria-selected="true" data-route="0">Instruction change</button><button type="button" role="tab" aria-selected="false" data-route="1">Engineering ticket</button></div><div class="route" data-r="0"><h4>Required wording keeps getting changed</h4><div class="instr">Always end client summaries with the required disclosure line.</div><div class="acts"><span class="act p approve"><span class="l1">Approve change</span><span class="l2">Approved &#10003;</span></span></div></div><div class="route" data-r="1" hidden><h4>Connect the economic calendar to the Client Update Agent</h4><div class="ev"><div class="it"><span class="a">AI: “Treasuries were little changed ahead of fresh data.”</span><br><span class="e">Edited: “…ahead of the 8:30 a.m. ET CPI release.”</span></div></div></div></div></div></figure></div>
+      <div class="vis"><figure class="plate"><figcaption class="plate-head"><span class="fg">Fig. 04</span><span class="ft">Release check</span><span class="sd">Sample data</span></figcaption><div class="plate-body"><div class="h-verify"><div class="tl ok"><i>&#10003;</i><div><b>Release approved · all 17 past corrections hold</b></div></div><div class="tl bad"><i>&times;</i><div><b>Release blocked · 3 of 17 past corrections would come back</b></div></div><div class="lbl" style="margin-top:22px">Correction rate after release</div><div class="ba"><div><b>Economic releases left out of the market summary</b><div class="s">Market Summary Agent</div></div><div class="n"><span class="x">17%</span><i>&rarr;</i><span class="y">12%</span></div><div class="t" style="--w:30%"></div></div></div></div></figure></div>
+    </div>
+  </div></div></div>
+</div><div class="how-end"></div></section>
+
+<section class="sec roles" id="views"><div class="wrap">
+  <div class="label reveal"><b>03</b> Who it’s for</div>
+  <div class="head solo reveal"><h2>Built with different views in mind.</h2></div>
+  <div class="roles-grid text-only reveal">
+    <div class="role"><span class="k">Analysts</span><h3>Their own edits.</h3><p>Where they lose the most time and which edits they keep making. It doubles as coaching.</p></div>
+    <div class="role"><span class="k">Leaders</span><h3>High-level patterns.</h3><p>The types of changes being made and which teams are affected, week over week.</p></div>
+    <div class="role"><span class="k">Engineers</span><h3>Exact instances.</h3><p>The real examples behind each pattern, and a prioritized fix list for each team, ranked by urgency and rework hours.</p></div>
+  </div>
+</div></section>
+
+<section class="sec" id="why"><div class="wrap">
+  <div class="label reveal"><b>04</b> Why now</div>
+  <div class="head solo reveal"><h2>Companies are scaling and spending on AI faster than they’re learning from the employees using it.</h2></div>
+  <div class="now-grid">
+    <div class="now-stats reveal">
+      <span class="k">The numbers</span>
+      <div class="fig-n"><b>44%</b><span>scale AI across the enterprise, up from 38%.</span></div>
+      <div class="fig-n"><b>37%</b><span>report any earnings impact, unchanged.</span></div>
+      <p class="fig-src">Source: McKinsey, state of AI 2026</p>
+    </div>
+    <div class="now-diff reveal">
+      <span class="k">How we’re different</span>
+      <div class="cmp-row"><h3>Adoption tools</h3><p>Measure AI adoption, usage and proficiency.</p></div>
+      <div class="cmp-row"><h3>Evaluation tools</h3><p>Test AI against checks a team writes in advance.</p></div>
+      <div class="cmp-row us"><h3>Farfield</h3><p>Shows where AI fails and what fixing it costs, from real corrections.</p></div>
+      <p class="cmp-note">We follow AI output from prompt to final deliverable, with no labeling or extra workflow.</p>
     </div>
   </div>
 </div></section>
 
-<section class="sec" id="how" aria-labelledby="how-h"><div class="wrap">
-  <div class="sec-head">
-    <span class="label">02 · How it works</span>
-    <h2 id="how-h">Farfield turns corrections into a feedback loop.</h2>
-  </div>
-  <ol class="g4" style="margin-top:40px;list-style:none;padding:0">
-    <li class="card"><span class="num">01</span><h3>Capture</h3><p>Captures every reprompt in AI chat tools like Claude and ChatGPT, then everything downstream in Mail, Word, Excel and PowerPoint. Employees don’t do anything extra. Data is masked by default.</p></li>
-    <li class="card"><span class="num">02</span><h3>Find patterns</h3><p>Groups the same correction across employees and teams, and measures the rework time each one causes.</p></li>
-    <li class="card"><span class="num">03</span><h3>Recommend</h3><p>Turns each recurring correction into a fix: an instruction change a team lead can approve, or an engineering ticket.</p></li>
-    <li class="card"><span class="num">04</span><h3>Verify</h3><p>Backtests each fix against past corrections before it ships, then tracks week over week whether rework falls.</p></li>
-  </ol>
-  <div style="margin-top:72px">
-    <h3 style="font-size:clamp(24px,2.4vw,30px)">Built with different views in mind</h3>
-    <ul class="g3 blist-row" style="margin-top:24px">
-      <li class="view"><h4 class="label">Analysts</h4><p><b style="color:var(--ink);font-weight:600">Their own edits:</b> where they lose the most time and which edits they keep making. It doubles as coaching.</p></li>
-      <li class="view"><h4 class="label">Leaders</h4><p><b style="color:var(--ink);font-weight:600">High-level patterns:</b> the types of changes being made and which teams are affected, week over week.</p></li>
-      <li class="view"><h4 class="label">Engineers</h4><p><b style="color:var(--ink);font-weight:600">Exact instances:</b> the real examples behind each pattern, and a prioritized fix list for each team, ranked by urgency and rework hours.</p></li>
-    </ul>
-  </div>
-</div></section>
-
-<section class="sec" id="why" aria-labelledby="why-h"><div class="wrap">
-  <div class="sec-head">
-    <span class="label">03 · Why now</span>
-    <h2 id="why-h">Companies are scaling and spending on AI faster than they’re learning from the employees using it.</h2>
-  </div>
-  <div class="g2" style="margin-top:40px">
-    <div class="col">
-      <h3 class="label">The numbers</h3>
-      <div>
-        <div class="stat"><b>44%</b><span>scale AI across the enterprise, up from 38%.</span></div>
-        <div class="stat"><b>37%</b><span>report any earnings impact, unchanged.</span></div>
+<section class="sec team" id="team"><div class="wrap">
+  <div class="label reveal"><b>05</b> The team</div>
+  <div class="team-grid">
+    <div class="team-l reveal"><h2>Two founders who felt this firsthand.</h2>
+      <div class="whyus">
+        <div class="founder"><h3>Belle Zou</h3><span class="org">Citadel · AI · Previously NVIDIA</span><p>Built the first consolidated view of recurring trade corrections, and was the first intern escalated to the head of operations.</p><a class="li" href="https://www.linkedin.com/in/bellezou555" target="_blank" rel="noopener">LinkedIn<span class="vh"> profile of Belle Zou</span></a></div>
+        <div class="founder"><h3>Charlotte Tan</h3><span class="org">Goldman Sachs · Physics and electrical engineering</span><p>Tracked every failure in a compliance AI tool and escalated a formal case to senior leadership.</p><a class="li" href="https://www.linkedin.com/in/charlottetan626/" target="_blank" rel="noopener">LinkedIn<span class="vh"> profile of Charlotte Tan</span></a></div>
       </div>
-      <p class="source">Source: McKinsey, state of AI 2026.</p>
     </div>
-    <div class="col">
-      <h3 class="label">How we’re different</h3>
-      <div class="cmp">
-        <div><b>Adoption tools</b><p>Measure AI adoption, usage and proficiency.</p></div>
-        <div><b>Evaluation tools</b><p>Test AI against checks a team writes in advance.</p></div>
-        <div class="hl"><b>Farfield</b><p>Shows where AI fails and what fixing it costs, from real corrections.</p></div>
-      </div>
-      <p style="margin-top:20px">We follow AI output from prompt to final deliverable, with no labeling or extra workflow.</p>
-    </div>
-  </div>
-</div></section>
-
-
-<section class="sec" id="team" aria-labelledby="team-h"><div class="wrap">
-  <div class="sec-head">
-    <span class="label">04 · Team</span>
-    <h2 id="team-h">Two founders who felt this firsthand.</h2>
-  </div>
-  <div class="g2" style="margin-top:40px">
-    <div class="people">
-      <article class="card person">
-        <h3>Belle Zou</h3>
-        <span class="org">Citadel · AI · Previously NVIDIA</span>
-        <p>Built the first consolidated view of recurring trade corrections, and was the first intern escalated to the head of operations.</p>
-        <a href="https://www.linkedin.com/in/bellezou555" target="_blank" rel="noopener">LinkedIn<span class="vh"> profile of Belle Zou (opens in a new tab)</span></a>
-      </article>
-      <article class="card person">
-        <h3>Charlotte Tan</h3>
-        <span class="org">Goldman Sachs · Physics and electrical engineering</span>
-        <p>Tracked every failure in a compliance AI tool and escalated a formal case to senior leadership.</p>
-        <a href="https://www.linkedin.com/in/charlottetan626/" target="_blank" rel="noopener">LinkedIn<span class="vh"> profile of Charlotte Tan (opens in a new tab)</span></a>
-      </article>
-    </div>
-    <div class="col story">
-      <h3 class="label" style="margin-bottom:20px">Our story</h3>
+    <div class="story reveal">
       <p>We both dealt with these frustrations firsthand, at Citadel and Goldman Sachs.</p>
       <p>We initially thought the problem was AI observability. After 50+ conversations with operators and AI leaders at financial firms, we saw the bigger problem was the rework after AI responds.</p>
       <p>Design partners now shape the product.</p>
-      <aside class="note tint">
-        <h3 class="label">Why Farfield?</h3>
-        <p>In physics, the far field is where a system behaves very differently from the near field. AI is tested near, in the lab, and used far, on the floor.</p>
-      </aside>
-      <p style="margin-top:28px"><a class="btn secondary" href="team.html">Careers</a></p>
+      <aside class="whynote"><span class="k">Why Farfield?</span><p>In physics, the far field is where a system behaves very differently from the near field. AI is tested near, in the lab, and used far, on the floor.</p></aside>
+      <div class="cta-row"><a class="btn dk" href="team.html">Careers <span class="arr" aria-hidden="true">&rarr;</span></a></div>
     </div>
   </div>
 </div></section>
 
-<section class="sec" id="contact" aria-labelledby="contact-h"><div class="wrap">
-  <div class="sec-head">
-    <span class="label">05 · Contact us</span>
-    <h2 id="contact-h">Improve your enterprise AI from the data you already have.</h2>
+<section class="sec cta" id="contact">
+  <canvas class="field-cv" id="ctaField" aria-hidden="true"></canvas>
+  <div class="wrap reveal">
+    <div class="label"><b>06</b> Contact us</div>
+    <h2>Improve your enterprise AI from the data you already have.</h2>
     <p class="lead">Farfield turns the corrections employees already make into fixes for company AI.</p>
+    <div class="contact-row"><a class="btn" href="https://calendar.app.google/Xvj6nB62QJjd9f3v9" target="_blank" rel="noopener">Book a demo<span class="arr" aria-hidden="true">&rarr;</span></a><a class="mail" href="mailto:contact@withfarfield.com">contact@withfarfield.com</a></div>
+    <p class="small">Start with one team and one recurring workflow.</p>
   </div>
-  <div class="contact">
-    <div class="card"><span class="label">Email</span><a class="mail" href="mailto:contact@withfarfield.com">contact@withfarfield.com</a></div>
-    <div class="card"><span class="label">Walkthrough</span><p>Start with one team and one recurring workflow.</p><a class="btn" href="https://calendar.app.google/Xvj6nB62QJjd9f3v9" target="_blank" rel="noopener">Book a demo</a></div>
-  </div>
-</div></section>
-
+</section>
 </main>
-<footer>
-  <div class="wrap foot">
-    <a class="brand" href="index.html" aria-label="Farfield home"><img src="assets/logo-mark.svg" alt="" width="30" height="30">Farfield</a>
-    <nav class="links" aria-label="Footer"><a href="product.html">Product</a><a href="team.html">Careers</a><a href="#contact">Contact</a><a href="https://calendar.app.google/Xvj6nB62QJjd9f3v9" target="_blank" rel="noopener">Book a demo</a></nav>
-    <p class="copy">© 2026 Farfield · San Francisco</p>
-  </div>
-</footer>
-<script src="assets/site.js" defer></script>
+<footer><div class="wrap foot"><img src="assets/lockup_light.png" alt="Farfield" width="132" height="22"><div class="links"><a href="product.html">Product</a><a href="team.html">Careers</a><a href="#contact">Contact</a><a href="https://calendar.app.google/Xvj6nB62QJjd9f3v9" target="_blank" rel="noopener">Book a demo</a></div><div class="copy">© 2026 Farfield · San Francisco</div></div></footer>
+<script src="assets/site.js"></script>
 </body>
 </html>
