@@ -157,6 +157,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 /* ---------- contact ---------- */
 .contact{margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .contact .card{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.contact .card p{color:var(--ink-2)}
 .contact .mail{font:600 clamp(20px,2.2vw,26px)/1.2 var(--font);letter-spacing:-.02em;word-break:break-word}
 @media (max-width:760px){.contact{grid-template-columns:1fr}}
 

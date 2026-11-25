@@ -62,7 +62,7 @@
       <p class="status" id="jstatus" role="status" aria-live="polite"></p>
     </form>
     <div class="success" id="jsuccess" tabindex="-1">
-      <h2 id="jsuccess-h">Thank you.</h2>
+      <h2 id="jsuccess-h">Thanks.</h2>
       <p id="jsuccess-msg">We’ll be in touch within 24 hours.</p>
     </div>
   </div>
@@ -86,7 +86,7 @@
   var f=document.getElementById('jform'), st=document.getElementById('jstatus'); if(!f) return;
   var ok=document.getElementById('jsuccess'), okMsg=document.getElementById('jsuccess-msg');
   function say(m,err){ st.textContent=m; st.className='status'+(err?' err':''); }
-  function done(m){ say(''); okMsg.textContent=m; ok.classList.add('on'); f.hidden=true; ok.focus(); }
+  function done(h,m){ say(''); document.getElementById('jsuccess-h').textContent=h; okMsg.textContent=m; ok.classList.add('on'); f.hidden=true; ok.focus(); }
   function send(url,d){
     if(url.indexOf('script.google.com')>-1){   // Google Apps Script: a plain form post (no CORS preflight)
       var body=new URLSearchParams(); Object.keys(d).forEach(function(k){ body.append(k,d[k]); });
@@ -97,7 +97,7 @@
   function mailto(d){
     var body='Name: '+d.name+'\nEmail: '+d.email+'\nLinkedIn: '+d.linkedin+'\n\nA time AI got something wrong, and what they did:\n'+d.story;
     window.location.href='mailto:'+FALLBACK_EMAIL+'?subject='+encodeURIComponent('Join the team: '+d.name)+'&body='+encodeURIComponent(body);
-    done('Your email app should now open with your details filled in. Press send there to finish. If nothing opens, write to '+FALLBACK_EMAIL+'.');
+    done('One more step.','Your email app should open with your answers filled in. Hit send to finish. If it doesn’t open, email us at '+FALLBACK_EMAIL+'.');
   }
   f.addEventListener('submit',function(e){
     e.preventDefault();
@@ -109,7 +109,7 @@
     delete d.website; d.type='Join the team';
     if(!JOIN_ENDPOINT){ mailto(d); return; }
     say('Sending...');
-    send(JOIN_ENDPOINT,d).then(function(){ f.reset(); done('We’ll be in touch within 24 hours.'); }).catch(function(){ mailto(d); });
+    send(JOIN_ENDPOINT,d).then(function(){ f.reset(); done('Thanks.','We’ll be in touch within 24 hours.'); }).catch(function(){ mailto(d); });
   });
 })();
 </script>

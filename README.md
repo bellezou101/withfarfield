@@ -23,9 +23,6 @@ So work on a branch, review a preview, and only merge to `main` when it is appro
 Every "Book a demo" button opens the Google Calendar booking page in a new tab. Search for `calendar.app.google` to change it.
 The Contact section uses `mailto:contact@withfarfield.com`.
 
-## Pilot link
-"Learn more about a pilot" currently points to the Contact section. Search for `TODO(pilot-url)` in `index.html` and `product.html` and replace the `href` once the pilot page exists.
-
 ## The Careers form
 In `team.html`, `JOIN_ENDPOINT` is empty, so a submission opens an email to contact@withfarfield.com with the answers filled in, and the page shows a confirmation.
 To collect entries in a sheet instead, paste a form URL (for example a Google Apps Script web app) into `JOIN_ENDPOINT`.

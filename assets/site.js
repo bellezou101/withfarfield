@@ -31,8 +31,8 @@
     var empty=out.querySelector('.rc-empty'), run=out.querySelector('.rc-run'), res=out.querySelector('.rc-res'), timer=null;
     var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var R={
-      safe:{cls:'ok',html:'<b>Release approved</b>This change keeps every past correction in place.<ul><li>17 of 17 past corrections hold</li><li>No corrected error comes back</li></ul>'},
-      risky:{cls:'bad',html:'<b>Release blocked</b>This change would bring back errors that were already corrected.<ul><li>Required disclosure line omitted</li><li>Source attribution dropped</li><li>3 of 17 past corrections would recur</li></ul>'}
+      safe:{cls:'ok',html:'<b>Release approved</b>All 17 past corrections still pass.'},
+      risky:{cls:'bad',html:'<b>Release blocked</b>3 of 17 past corrections would come back, including:<ul><li>Required disclosure line left out</li><li>Source attribution dropped</li></ul>'}
     };
     btns.forEach(function(b){ b.addEventListener('click',function(){
       var k=b.getAttribute('data-rc'); clearTimeout(timer);
